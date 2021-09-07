@@ -1,0 +1,27 @@
+
+[requires]
+fmt/[>=8.0.1]
+openssl/[>=1.1.1k]
+glfw/[>=3.3.4]
+glew/[>=2.1.0]
+imgui/[>=1.84.2]
+
+[generators]
+cmake_find_package
+
+
+[options]
+openssl:shared=False
+glew:shared=False
+glfw:shared=False
+fmt:shared=False
+
+
+
+[imports]
+./res/bindings, imgui_impl_glfw.cpp -> ../bindings
+./res/bindings, imgui_impl_opengl3.cpp -> ../bindings
+./res/bindings, imgui_impl_glfw.h -> ../bindings
+./res/bindings, imgui_impl_opengl3.h -> ../bindings
+./res/bindings, imgui_impl_opengl3_loader.h -> ../bindings
+
